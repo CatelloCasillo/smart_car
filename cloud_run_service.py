@@ -11,9 +11,9 @@ def data_preprocessing(data):
 
 
 client = bigquery.Client()
-table_id = "kp031-traineeship-catello."
+table_id = "kp031-traineeship-catello.smart_car.measure"
 app = Flask(__name__)
-@app.route("/measure", methods=["POST"])
+@app.route("/", methods=["POST"])
 def index():
     envelope = request.get_json()
     if not envelope:
